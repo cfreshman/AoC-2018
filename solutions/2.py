@@ -1,8 +1,9 @@
-from collections import Counter
-
 import sys
 with open(sys.argv[1]) as file:
     lines = file.read().splitlines()
+
+from collections import Counter
+
 
 # --- Part One ---
 two_count, three_count = 0, 0

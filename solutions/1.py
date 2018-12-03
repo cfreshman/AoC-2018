@@ -1,6 +1,7 @@
 import sys
 with open(sys.argv[1]) as file:
-    lines = file.readlines()
+    lines = file.read().splitlines()
+
 
 # --- Part One ---
 print(sum(int(line) for line in lines))
