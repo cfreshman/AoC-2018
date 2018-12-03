@@ -1,20 +1,11 @@
-line = None
-def read_line():
-    global line
-    try:
-        line = input()
-    except:
-        line = None
-    return line
+import sys
+with open(sys.argv[1]) as file:
+    lines = file.readlines()
 
-lines = []
-while read_line() != None:
-    lines.append(line)
-
-# part 1
+# --- Part One ---
 print(sum(int(line) for line in lines))
 
-# part 2
+# --- Part Two ---
 seen = set()
 freq = 0
 while freq not in seen:
